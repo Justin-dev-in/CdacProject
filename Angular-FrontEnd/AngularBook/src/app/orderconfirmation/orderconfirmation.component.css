@@ -1,0 +1,22 @@
+
+
+ /*Artist card-Body   */
+.card-body{
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* confirm booking  */
+.card-header{
+    font-family: 'Share Tech Mono', monospace;
+}
+.Artist-profile-text{
+
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top:5px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+}

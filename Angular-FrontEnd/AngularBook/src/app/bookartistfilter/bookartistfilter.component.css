@@ -1,0 +1,29 @@
+/* search filter for user to search artist  */
+.search-control{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    padding-top: 25px;
+    text-align: center;
+}
+/*  Category Posts */
+.post-head-title{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: lighter;
+     
+}
+.post-head-text{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top:5px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+}

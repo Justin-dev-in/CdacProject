@@ -1,0 +1,13 @@
+/* footer link  */
+.footer-link{
+    text-decoration: none;
+    color:gray;
+}
+.footer-link:hover{
+    text-decoration: none;
+    color:darkgrey;
+}
+/* footer contact */
+.contact{
+    color: gray;
+}

@@ -1,0 +1,73 @@
+<!-- <p>orderconfirmation works!</p>
+{{result[0]}}
+<form>
+    <table>
+        
+        <tr >
+             va <td> <input type="text" [(ngModel)]="o.id" [ngModelOptions]="{standalone:
+                true}"lue="{{o.id}}"/></td> 
+            <td> <input type="text" [(ngModel)]="result[0]" [ngModelOptions]="{standalone:
+                true}" disabled  value="{{result[0]}}"/></td>
+         <td><input type="text"  [(ngModel)]="result[1]" [ngModelOptions]="{standalone:
+            true}" disabled  value="{{result[1]}}"/></td>
+         <td><input type="text" [(ngModel)]="result[2]" [ngModelOptions]="{standalone:
+            true}" disabled  value="{{result[2]}}"/></td>
+         <td><input type="text" [(ngModel)]="result[3]" [ngModelOptions]="{standalone:
+            true}" disabled  value="{{result[3]}}"/></td>
+         <td><input type="text"  [(ngModel)]="venue" [ngModelOptions]="{standalone:true}" placeholder="Enter venue"  /></td>
+         <td><input type="text" [(ngModel)]="timeslot" [ngModelOptions]="{standalone:
+            true}"  placeholder="Enter timeslot"/></td>
+
+      
+         <script>
+          
+         </script>   
+         <td ><inpu type="hidden" id="img" value={{o.artist.artistPicture}}> -->
+         <!-- //<img src="{{o.artist.artistPicture}}"/>  
+    
+        
+            
+             
+             <td><input type="text" [(ngModel)]="udate" [ngModelOptions]="{standalone:
+               true}"   value="{{udate}}"></td>
+             <td><input type="submit" value="Book Now" (click)="orderNow(result[0],result[1],result[2],result[3],venue,timeslot,udate)"> </td> 
+            </tr>
+     </table>
+    </form> -->
+
+
+    <div class="row">
+      <p class="Artist-profile-text">Just Few Steps Away From Confirming Happiness</p>
+      </div>
+      <form>
+      <div class="card offset-3 mb-3" style="max-width: 840px;">
+      <h5 class="card-header">Confirm Booking Details</h5>
+      <div class="card-body">
+      <h5 class="card-title"><input type="text" [(ngModel)]="result[0]" [ngModelOptions]="{standalone:
+         true}" disabled  value="{{result[0]}}"/></h5>
+      <p class="card-text"  ><input type="text" [(ngModel)]="result[1]" [ngModelOptions]="{standalone:
+         true}" disabled  value="{{result[1]}}"/></p>
+      <p class="card-text" ><input type="text" [(ngModel)]="result[2]" [ngModelOptions]="{standalone:
+         true}" disabled  value="{{result[2]}}"/></p>
+      <p class="card-text"><input type="text" [(ngModel)]="result[3]" [ngModelOptions]="{standalone:
+         true}" disabled  value="{{result[3]}}"/></p>
+    
+      <p class="card-text">
+      <input type="text" class="form-control col-4"  [(ngModel)]="venue" [ngModelOptions]="{standalone:true}"placeholder="Event Venue*" required/>
+      <p class="card-text">
+      <select class="form-control col-4" required [(ngModel)]="timeslot" [ngModelOptions]="{standalone:
+         true}">
+      <option selected disabled >Preffered Schedule*</option>
+      <option>Morning</option>
+      <option>Afternoon</option>
+      <option>Evening</option>
+      <option>Night</option>
+      <option>After 12:00 PM</option>
+      </select>
+   </p>
+      <p><input type="text" [(ngModel)]="udate" [ngModelOptions]="{standalone:
+         true}"   value="{{udate}}"></p>
+      <button type="submit" class="btn bg-dark" style="color: white;" (click)="orderNow(result[0],result[1],result[2],result[3],venue,timeslot,udate)">CONFIRM BOOKING</button>
+      </div>
+      </div>
+      </form>

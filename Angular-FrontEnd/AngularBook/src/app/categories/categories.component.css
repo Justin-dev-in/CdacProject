@@ -1,0 +1,48 @@
+.post-head-title{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: lighter;
+     
+}
+.post-head-text{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top:5px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+.post-item{
+    margin: auto;
+}
+.post-img{
+    margin-top: 10px;
+    width: 250px;
+    height:130px;
+    transition: transform .2s;
+}
+.post-img:hover{
+    transform: scale(1.2);
+
+}
+
+.post-icon{
+    position: relative;
+    text-align: center; 
+    font-size: x-large;
+      
+}
+.post-title{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 25px;
+}

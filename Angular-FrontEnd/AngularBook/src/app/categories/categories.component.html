@@ -1,0 +1,134 @@
+ <!-- User Page Post-Categories Start Here Containing -->
+ <div class="container">
+   <form>
+    <!-- Post-Category Text Here -->
+    <div class="row align-center offset-1 ">
+      <p class="post-head-title">CATEGORIES</p>
+       
+      <p class="post-head-text">
+       <span class="post-head-title" style="color:red">Hi User </span>Explore the wide range 
+       of Entertainers and go through their profiles and testimonials. 
+       Click the 'Book' button on Artist's Profile and fill in your budget and other
+        details about your Event.
+      </p>
+    </div>
+    <!-- Post-Category Links Start Here-->
+
+   <!-- Post-Category 1st Row Start Here With 3 Post-Category-->
+    <div class="row align-center  offset-1 ">
+     <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+         <div>
+            <img src="./assets/user-profile-post-images/singer-category.jpg" (click)="showByCategory()"  class="post-img"/>
+         </div>
+         <div class="post-title">
+           <span>SINGER</span>
+         </div>
+       <div class="post-icon">
+         <i class="fas fa-music"></i>
+       </div>
+     </div>
+     <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+       <div>
+          <img src="./assets/user-profile-post-images/magic.jpg" class="post-img" (click)="showByCategory()" />
+       </div>
+       <div class="post-title">
+         <span>MAGICIAN</span>
+       </div>
+       <div class="post-icon">
+         <i class="fas fa-hat-wizard"></i>
+       </div>
+     </div>
+     <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+       <div>
+           <img src="./assets/user-profile-post-images/Instument.jpg" class="post-img"  (click)="showByCategory()"/>
+       </div>
+       <div class="post-title">
+           <span>INSTRUMENTALIST</span>
+       </div>
+       <div class="post-icon">
+           <i class="fas fa-guitar"></i>
+       </div>
+     </div>
+   </div>
+
+   <!-- Post-Category 1st Row Start Here With 3 Post-Category-->
+   <!-- Post-Category 2nd Row Start Here With 3 Post-Category-->
+
+   <div class="row align-center offset-1">
+     <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+         <div>
+            <img src="./assets/user-profile-post-images/anchors.jpg"  (click)="showByCategory()" class="post-img"/>
+         </div>
+         <div class="post-title">
+           <span>ANCHOR/EMCC</span>
+         </div>
+       <div class="post-icon">
+         <i class="fas fa-microphone"></i>
+       </div>
+     </div>
+     <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+       <div>
+          <img src="./assets/user-profile-post-images/dj.jpg"  (click)="showByCategory()" class="post-img"/>
+       </div>
+       <div class="post-title">
+         <span>DJ</span>
+       </div>
+       <div class="post-icon">
+         <i class="fas fa-headset"></i>
+       </div>
+     </div>
+     <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+       <div>
+           <img src="./assets/user-profile-post-images/poety.jpg"  (click)="showByCategory()" class="post-img"/>
+       </div>
+       <div class="post-title">
+           <span>WRITER/POET</span>
+       </div>
+       <div class="post-icon">
+           <i class="fas fa-pen-fancy"></i>
+       </div>
+     </div>
+   </div>
+   
+   <!--Post-Category 2nd Row End Here With 3 Post-Category -->
+   <!-- Post-Category 3rd Row Start Here With 3 Post-Category-->
+
+     <div class="row align-center  offset-1 ">
+       <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item" >
+           <div >
+             <img src="./assets/user-profile-post-images/Dance-category.jpg"  [(ngModel)]="dancer" name="dancer"  value="dancer" (click)="showByCategory(dancer)" class="post-img"/>
+           
+            </div>
+           <div class="post-title">
+             <a  >DANCER</a>
+           </div>
+         <div class="post-icon">
+           <i class="fas fa-child"></i>
+         </div>
+       </div>
+       <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+         <div>
+            <img src="./assets/user-profile-post-images/comedians.jpg"  [(ngModel)]="comedian" name="comedian"   (click)="showByCategory(comedian)" class="post-img"/>
+         </div>
+         <div class="post-title">
+           <span>COMEDIAN</span>
+         </div>
+         <div class="post-icon">
+           <i class="fas fa-laugh-beam"></i>
+         </div>
+       </div>
+       <div class="col-md-3 col-lg-4 col-xl-3 mb-4 post-item">
+         <div>
+             <img src="./assets/user-profile-post-images/other.jpg" (click)="showByCategory()"  class="post-img"/>
+         </div>
+         <div class="post-title">
+             <span>OTHER</span>
+         </div>
+         <div class="post-icon">
+             <i class="fas fa-angle-right"></i>
+         </div>
+       </div>
+       </div>
+
+</form> 
+     </div>

@@ -1,0 +1,94 @@
+
+<form #userForm="ngForm" (ngSubmit)="onsubmit()">
+  
+  <div class="container">
+    <h1>{{message}}</h1>
+    <div class="row">
+       <p class="registration-text">USER REGISTRATION FORM</p>
+    </div>
+ </div>
+
+
+ <div class="container">
+   <div class="form-group">
+     <input type="text" class="form-control" [(ngModel)]="user.userName" name="userName" #userName='ngModel'  placeholder="Name*" required [class.is-invalid]="userName.invalid && userName.touched">
+     <span class="text-danger" [class.d-none]="userName.valid || userName.untouched" >Name is required</span>
+   </div>
+
+
+   <div class="form-group">
+     <input type="email" class="form-control" [(ngModel)]="user.userEmail" name="userEmail" #userEmail="ngModel" placeholder="Email*" required 
+     pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" [class.is-invalid]="userEmail.invalid && userEmail.touched">
+     <div *ngIf="userEmail.errors && (userEmail.invalid && userEmail.touched)"> 
+        <span class="text-danger" *ngIf="userEmail.errors.required">Email field can't be empty</span>
+        <span class="text-danger" *ngIf="userEmail.errors.pattern">Invalid Email Address</span>
+     </div> 
+   </div>
+   <div class="form-group">
+     <input type="text" class="form-control" [(ngModel)]="user.userPhoneNumber" name="userPhoneNumber" #userPhoneNumber='ngModel' placeholder="Contact Number*"
+     required pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$" [class.is-invalid]="userPhoneNumber.invalid && userPhoneNumber.touched" minlength="10" maxlength="13">
+     <div *ngIf="userPhoneNumber.errors && (userPhoneNumber.invalid && userPhoneNumber.touched)">
+        <span class="text-danger" *ngIf="userPhoneNumber.errors.required">Phone field empty</span>
+        <span class="text-danger" *ngIf="userPhoneNumber.errors.pattern">Invalid Phone number</span>
+        <span class="text-danger" *ngIf="userPhoneNumber.errors.minlength">Phone Number should be 10 digits</span>
+     </div>
+   </div>
+   <div class="form-group">
+     <input type="password" class="form-control" [(ngModel)]="user.userPassword" name="userPassword" #userPassword='ngModel' placeholder="Password*" required
+     pattern="^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{8,16}$" [class.is-invalid]="userPassword.invalid && userPassword.touched" minlength="8" maxlength="16"     >
+     <div *ngIf="userPassword.errors && (userPassword.invalid && userPassword.touched)">
+      <span class="text-danger" *ngIf="userPassword.errors.required">Password field is empty</span>
+      <span class ="text-danger" *ngIf="userPassword.errors.pattern">Password Must Contain Uppercase,Lowercase,Special Character & Number </span>
+      <span class="text-danger" *ngIf="userPassword.errors.minlength">Password should be of minimum 8 letters</span>
+     </div>
+   </div>
+   <div class="form-group">
+     <input type="password" userPasswordValidator="userPassword" class="form-control" [(ngModel)]="user.confirmPassword" name="confirmPassword" #confirmPassword='ngModel'  placeholder="Confirm Password*" required
+     [class.is-invalid]="confirmPassword.invalid && confirmPassword.touched">
+     <div *ngIf="confirmPassword.errors &&  (confirmPassword.invalid && confirmPassword.touched)">
+       <span class="text-danger" *ngIf="confirmPassword.errors.required">Confirm Password field is empty</span>
+       <span class="text-danger" *ngIf="confirmPassword.errors.notEqual">Passwords not match</span>
+     </div>
+   </div>
+   <div class="form-group">
+     <textarea class="form-control" [(ngModel)]="user.userAdddress" name="userAdddress" #userAdddress='ngModel' placeholder="Address*" required 
+     [class.is-invalid]="userAdddress.invalid && userAdddress.touched" maxlength="100"></textarea>
+     <div *ngIf="userAdddress.errors && (userAdddress.invalid && userAdddress.touched)">
+        <span class="text-danger" *ngIf="userAdddress.errors.required">Address field is empty</span>
+        <span class="text-danger" *ngIf="userAdddress.errors.maxlength">Address filed cannot exceed more than 100 characters</span>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-6 form-group">
+       <input type="text" class="form-control" [(ngModel)]="user.userDob" name="userDob" #userDob='ngModel' placeholder="Date Of Birth" onfocus="(this.type='date')" required
+       [class.is-invalid]="userDob.invalid && userDob.touched"/>
+       <div *ngIf="userDob.errors && (userDob.invalid && userDob.touched)">
+        <span class="text-danger" *ngIf="userDob.errors.required">date not selected</span>
+       </div>
+     </div>
+   
+     <div class="col-6 form-group">
+       <select class="form-control"  [(ngModel)]="user.typeOfUser" name="typeOfUser"  required>
+        <option selected disabled>Booking Artist For*</option>
+        <option value="Personal">Personal</option>
+        <option value="Company">Company</option>
+       </select>
+       
+     </div> 
+   </div>
+   <div class="row">
+     <div class="col-6 form-check" style="margin-left: 16px;">
+       <input class="form-check-input" name="userCheckbox" [(ngModel)]="user.userCheckbox" #userCheckbox='ngModel' type="checkbox"   id="Terms-condtion-checkbox" [class.is-invalid]="userCheckbox.invalid && userCheckbox.touched" required>
+       <label class="form-check-label">I Agree Terms and Conditions</label>
+       <div *ngIf="userCheckbox.errors && (userCheckbox.invalid && userCheckbox.touched)">
+        <Span class="text-danger" *ngIf="userCheckbox.errors.required">Accept Ts & Cs is required</Span>   
+      </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="form-group offset-11">
+       <button type="submit" class="btn btn-dark" (click)="registerNow()" [disabled]="userForm.form.invalid">SUBMIT</button>
+     </div>
+   </div>
+ </div>
+</form>

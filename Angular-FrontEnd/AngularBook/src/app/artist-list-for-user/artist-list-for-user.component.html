@@ -1,0 +1,33 @@
+
+
+ <div class="container">
+  <div class="form-group col-6 offset-3 alert alert-danger" *ngIf="empty">{{empty}}</div>
+    <div class="row align-center offset-2">
+        <div  *ngFor="let o of result">
+     
+     <div class="card offset-2" width="100px" height="100px">
+       <!-- <img src="./assets/Images/download.jpg" class="card-img-top" alt="..."> -->
+       <img src="./assets/Images/{{o.artist.artistPicture}}" class="card-img-top" alt="..." >
+       <div class="card-body">
+        
+         <h6 class="card-title" style="color: red;">{{o.artist.artistName}}</h6>
+         <p class="card-text"><small class="text-muted">{{o.artist.artistAddress}}</small></p>
+         <p class="card-text"><small class="text-muted">{{o.artist.artistGenre}}</small></p>
+         <p class="card-text">{{o.artistfees}}</p>
+         <button type="button" class="btn bg-dark"  (click)="sendDetailstoCart(o.artist.artistName,o.artistfees,o.artist.artistAddress,o.artist.artistEmailID)">Book Now</button>        
+       </div>
+       <div class="card-footer">
+         <small class="text-muted"><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span>
+           <span>Verified</span>
+           </small>
+       </div>
+     </div>
+    </div>
+    </div>
+</div> 
+
+

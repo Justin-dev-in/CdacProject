@@ -1,0 +1,30 @@
+.sideMenu{
+    float: left;
+    height: 80%;
+    margin: auto;    
+}
+.sideMenu-content{
+    background-color:black; 
+    transition: transform .2s; 
+    border-bottom-style: groove;
+    font-family: 'Share Tech Mono', monospace;
+}
+.sideMenu-img{
+    width: 240px;
+    height:540px;
+}
+.sideMenu-content a {
+    color:white;
+    padding: 12px 25px;
+     text-decoration: none; 
+     display: block; 
+     font-size:large;
+     
+      
+     
+}
+.sideMenu-content a:hover {background-color:white;
+    color:black;
+    transform: scale(1.1);
+         
+}

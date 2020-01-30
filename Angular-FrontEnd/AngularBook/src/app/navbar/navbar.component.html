@@ -1,0 +1,61 @@
+<!-- Navbar With Logo,Search,category,login & singn up button ,Cart-icon -->
+  <!-- navbar height & attribute -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
+    <a class="navbar-brand"  routerLink="/Home">
+      <!-- navbar logo -->
+      <span class="logo">bookMyArtist</span>
+    </a>
+      <!-- navbar collapse for smaller devices -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="height: 60px;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <div>
+        <a routerLink="/Categories" >
+          <i class="fa fa-th nav-item nav-link" aria-hidden="true" style="color: gray;">
+              <span class="category-txt"  >Categories</span>
+          </i>
+          </a>
+      </div>
+      <!-- navbar search with ficon search-icon  -->
+    <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0">
+          <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control nav-control" size="10px" placeholder="Search">
+        </form>
+    </form>
+    <!-- navbar links  -->
+  <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/Home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">bookMyArtist ArtistList</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Admin_Login">ADMIN</a>
+      </li>
+  </ul>
+    <!-- <pre>    <div class="vline"></div></pre> -->
+    <!-- navbar cart-icon  -->
+    <div class="cart-icon">
+      <button class="close"><i class="fas fa-bell"></i></button>
+    </div>
+    <!-- navbar login & sign up  button -->
+    <div class="dropdown">
+      <button class="btn btn-login">Log In</button>
+      <div class="dropdown-content">
+        <a class="dropdown-item" routerLink="/Artist_Login">Artist Login</a>
+        <a class="dropdown-item" routerLink="/User_Login">User Login</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-danger">Sign Up</button>
+      <div class="dropdown-content">
+        <a class="dropdown-item" href="#" routerLink="/Artist_Registration">Artist Registration</a>
+        <a class="dropdown-item" href="#" routerLink="/User_Registration">User Registration</a>
+      </div>
+    </div>
+   </div>
+</nav>
+ 

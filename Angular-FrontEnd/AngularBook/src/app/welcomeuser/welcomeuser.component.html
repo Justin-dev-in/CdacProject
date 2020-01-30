@@ -1,0 +1,41 @@
+
+<div class="sideMenu">
+  <ul class="navbar-nav" style="background-image: url(C:\Users\i3\Desktop\Demo\sideBar.jpg);">
+    <li class="sideMenu-content" >
+      <a routerLink="/WelcomeUser/My_Account">
+        <i class="fas fa-user-circle"></i>
+        <span class="text"> My Account</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a routerLink="/WelcomeUser/Book_Artist_filter"> 
+         <i class="fas fa-shopping-cart"></i>
+        <span class="text"> Book Artist</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a routerLink="/WelcomeUser/UserBookings">
+        <i class="fas fa-list-alt"></i>
+        <span class="text"> My Order</span>
+      </a>
+    </li>
+   
+    <li class="sideMenu-content">
+      <a href="#">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="text" (click)="LogOutNow()"> Logout</span>
+      </a>
+    </li> 
+  </ul>
+  <!--User Opration Menu end  -->
+ </div>
+ <!-- <userprofilepost></userprofilepost> -->
+ <router-outlet></router-outlet>
+ 
+
+
+
+
+<!-- Navbar With Logo,Search,category,login & singn up button ,Cart-icon -->
+  <!-- navbar height & attribute -->
+ 

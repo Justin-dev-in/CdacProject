@@ -1,0 +1,29 @@
+<div class="container">
+    <div  *ngFor="let o of result">
+     
+    
+        
+     <div class="card offset-3" >
+      
+       <div class="card-body">
+  
+         <div class="card-text text-primary"><b>Order ID:</b> &nbsp; {{o.orderId}}</div>
+         <div class="card-text text-muted"><b>Category:</b> &nbsp;{{o.artist.artistGenre}}<div>
+         <div class="card-text text-muted"><b>OrderDate:</b> &nbsp;{{o.bookedDate}}</div>
+         <div class="card-text text-muted"><b>Order Venue:</b> &nbsp;{{o.venue}}</div>
+         <div class="card-text text-primary"><b>Artist Name:</b> &nbsp;{{o.artist.artistName}}</div>
+         <div class="card-text text-muted"><b>Artist Email:  </b>&nbsp; {{o.artist.artistEmailID}}</div>
+         <div class="card-text text-muted"><b>Artist PhoneNumber:  </b>&nbsp; {{o.artist.artistPhoneNumber}}</div>
+         
+        
+             
+       </div>
+       
+      
+       </div>
+     </div>
+    
+ </div>
+ &emsp;&emsp;&emsp;<br>
+</div>     
+

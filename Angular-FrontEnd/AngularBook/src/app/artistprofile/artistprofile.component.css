@@ -1,0 +1,30 @@
+
+
+/* artist profile  */
+ 
+.Artist-profile-head{
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: lighter;
+
+}
+.Artist-profile-text{
+
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top:5px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+ /*Artist card-Body   */
+.card-body{
+    font-family: 'Share Tech Mono', monospace;
+}

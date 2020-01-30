@@ -1,0 +1,163 @@
+<form #artistForm="ngForm">
+  <div class="container">
+    <div class="row">
+     <p class="registration-text">ARTIST REGISTRATION FORM</p>
+    </div>
+ </div>
+ <div class="container">
+    <div class="row">
+      <div class="col-6 form-group">
+       <input type="text" class="form-control" [(ngModel)]="artist.artistName"  [ngModelOptions]="{standalone:
+        true}" name="artist.artistName" #artistName='ngModel'  placeholder="Artist/Band Name*"  required [class.is-invalid]="artistName.invalid  && artistName.touched"/>
+      <div *ngIf="artistName.errors && (artistName.invalid && artistName.touched)">
+        <span class="text-danger" *ngIf="artistName.errors.required">Artist Name Field Empty</span>
+        
+        </div>
+      </div>
+
+      <div class="col-6 form-group">
+        <input type="text" class="form-control" [(ngModel)]="artist.artistPhoneNumber"  [ngModelOptions]="{standalone:
+          true}" name="artist.artistPhoneNumber" #artistPhoneNumber='ngModel'  placeholder="Contact Number*" required [class.is-invalid]="artistPhoneNumber.invalid && artistPhoneNumber.touched"
+          pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$" minlength="10"/>
+          <div *ngIf="artistPhoneNumber.errors && (artistPhoneNumber.invalid && artistPhoneNumber.touched)">
+              <span class="text-danger" *ngIf="artistPhoneNumber.errors.required">Phone number field is empty</span>
+              <span class="text-danger" *ngIf="artistPhoneNumber.errors.pattern">Invalid Phone number</span>
+              <span class="text-danger" *ngIf="artistPhoneNumber.errors.minlength">Phone Number should be 10 digits</span>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+     <div class="col-6 form-group">
+      <input type="email" class="form-control" [(ngModel)]="artist.artistEmailID"  [ngModelOptions]="{standalone:
+        true}" name="artist.artistEmailID" #artistEmailID='ngModel' placeholder="Email ID*" required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" [class.is-invalid]="artistEmailID.invalid && artistEmailID.touched" />
+     <div *ngIf="artistEmailID.errors && (artistEmailID.invalid && artistEmailID.touched)">
+      <span class="text-danger" *ngIf="artistEmailID.errors.required">Email field is empty</span>
+      <span class="text-danger" *ngIf="artistEmailID.errors.pattern">invalid email id</span>
+     </div>
+      </div>
+     <div class="col-6 form-group">
+       <input type="text" class="form-control" [(ngModel)]="artist.artistAddress"  [ngModelOptions]="{standalone:
+        true}" name="artist.artistAddress" #artistAddress='ngModel' required [class.is-invalid]="artistAddress.invalid &&  artistAddress.touched" placeholder="City*" maxlength="100" required/>
+     <div *ngIf="artistAddress.errors && (artistAddress.invalid && artistAddress.touched)">
+      <span class="text-danger" *ngIf="artistAddress.errors.required">City field is empty</span>
+      <span class="text-danger" *ngIf="artistAddress.maxlength">cannot exceed more than 100 characters</span>
+     </div>
+      </div>
+   </div>
+   <div class="row">
+     <div class="col-6 form-group">
+      <input type="password" class="form-control" [(ngModel)]="artist.artistPassword"  [ngModelOptions]="{standalone:
+        true}" name="artist.artistPassword" #artistPassword='ngModel' pattern="^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{8,16}$" placeholder="Password*" required [class.is-invalid]="artistPassword.invalid && artistPassword.touched" minlength="8"/>
+        <div *ngIf="artistPassword.errors && (artistPassword.invalid && artistPassword.touched)">
+          <span class="text-danger" *ngIf="artistPassword.errors.required">Password field is empty</span>
+          <span class="text-danger" *ngIf="artistPassword.errors.pattern">Password Must Contain Uppercase,Lowercase,Special Character & Number</span>
+          <span class="text-danger" *ngIf="artistPassword.errors.minlength">Password should be of minimum 8 letters</span>
+        </div>
+      </div>
+     <div class="col-6 form-group">
+      <input type="password" artistPasswordValidator="artist.artistPassword"  [(ngModel)]="artist.artistConfirm"  name="artistConfirm" class="form-control" placeholder="Confirm-Password*" 
+      #artistConfirm='ngModel' required [class.is-invalid]="artistConfirm.invalid && artistConfirm.touched"/>
+      <div *ngIf="artistConfirm.errors && (artistConfirm.invalid && artistConfirm.touched)">
+        <span class="text-danger" *ngIf="artistConfirm.errors.required">confirm password field empty</span>
+        <span class="text-danger" *ngIf="artistConfirm.errors.mustMatch">Password not match</span>
+        </div>
+     </div>
+
+   </div>
+   <div class="row">
+     <div class="col-6 form-group">
+      <select class="form-control"  [(ngModel)]="artist.artistExperience" #artistExperience='ngModel'  [ngModelOptions]="{standalone:
+        true}" name="artistExperience" [class.is-invalid]="artistExperience.invalid && artistExperience.touched" required>
+         <option selected value="">Exprience</option>
+         <option>0 To 1 Year</option>
+         <option>1 To 5 Year</option>
+         <option>More Then 5 Year</option>
+       </select>
+       <div *ngIf="artistExperience.errors && (artistExperience.invalid && artistExperience.touched)">
+        <span class="text-danger" *ngIf="artistExperience.errors.required">Experice not selected</span>
+       </div>
+     </div>
+    
+     <div class="col-6 form-group">
+       <select class="form-control" [(ngModel)]="artist.artistCertification" #artistCertification='ngModel'  [ngModelOptions]="{standalone:
+        true}"  name="artist.artistCertification" required [class.is-invalid]="artistCertification.invalid && artistCertification.touched" >
+         <option selected disabled value="">Any Certification*</option>
+         <option>Yes</option>
+         <option>No</option>
+       </select>
+       <div *ngIf="artistCertification.errors && (artistCertification.invalid && artistCertification.touched)">
+        <span class="text-danger" *ngIf="artistCertification.errors.required">Certification field is empty</span>
+       </div>
+     </div> 
+   </div>
+   <div class="row">
+     <div class="col-6 form-group">
+       <select class="form-control" [(ngModel)]="artist.artistGenre"  #artistGenre='ngModel' [ngModelOptions]="{standalone:
+        true}" name="artist.artistGenre" required [class.is-invalid]="artistGenre.invalid && artistGenre.touched">
+         <option selected disabled>Select Your category*</option>
+         <option>Anchor/EMCC</option>
+         <option>Singer(Solo)</option>
+         <option>Dancer(Solo)</option>
+         <option>Singer(Group)</option>
+         <option>Dancer(Group)</option>
+         <option>Instrumentalist</option>
+         <option>Live Band</option>
+         <option>Magician</option>
+         <option>Poet</option>
+         <option>Dj</option>
+         <option>Comedian</option>
+         <option>Other</option>
+       </select>
+       <div *ngIf="artistGenre.errors && (artistGenre.invalid && artistGenre.touched)"> 
+          <span class="text-danger" *ngIf="artistGenre.errors.required" >Genre not selected</span>
+       </div> 
+     </div> 
+     <div class="col-6 form-group">
+       <input type="date" [(ngModel)]="artist.artistDob" #artistDob='ngModel'  [ngModelOptions]="{standalone:
+        true}" name="artist.artistDob" class="form-control" required placeholder="Date Of Birth" onfocus="(this.type='date')" [class.is-invalid]="artistDob.invalid && artistDob.touched"/>
+        <div *ngIf="artistDob.errors && (artistDob.invalid && artistDob.touched)">
+          <span  class="text-danger" *ngIf="artistDob.errors.required">DOB not selected</span>
+        </div>
+      </div>
+   </div>
+   <div class="row">
+     <div class="col-6 form-group">
+       <input type="text" [(ngModel)]="artist.artistPicture"  [ngModelOptions]="{standalone:
+        true}" name="artist.artistPicture" #artistPicture='ngModel' required [class.is-invalid]="artistPicture.invalid && artistPicture.touched" class="form-control"  placeholder="Profile Picture" onfocus="(this.type='file')"/>
+        <div *ngIf="artistPicture.errors && (artistPicture.invalid && artistPicture.touched)">
+          <span class="text-danger" *ngIf="artistPicture.errors.required">Profile picture not selected</span>
+          </div>
+      </div>
+
+     <div class="col-6 form-group">
+       <select class="form-control" [(ngModel)]="artist.prefWorkHours"  [ngModelOptions]="{standalone:
+        true}"  name="artist.prefWorkHours" #prefWorkHours='ngModel' [class.is-invalid]="prefWorkHours.invalid && prefWorkHours.touched" required >
+         <option selected disabled>Preferd Working Hours*</option>
+         <option>Moring</option>
+         <option>Afternoon</option>
+         <option>Evening</option>
+         <option>Night</option>
+         <option>After 12:00 PM</option>
+       </select>
+       <div *ngIf="prefWorkHours.errors && (prefWorkHours.invalid && prefWorkHours.touched)">
+         <span class="text-danger" *ngIf="prefWorkHours.errors.required">Preferred working hours not selected</span>
+         </div>
+     </div>
+
+   </div>
+   <div class="row">
+     <div class="col-6 form-check" style="margin-left: 16px;">
+       <input class="form-check-input" name="artistCheckBox" [(ngModel)]="artist.artistCheckBox" #artistCheckBox='ngModel' type="checkbox"  id="Terms-condtion-checkbox" required [class.is-invalid]="artistCheckBox.invalid && artistCheckBox.touched">
+       <label class="form-check-label">I Agree Terms and Conditions</label>
+       <div *ngIf="artistCheckBox.errors && (artistCheckBox.invalid && artistCheckBox.touched)">
+         <span class="text-danger" *ngIf="artistCheckBox.errors.required">Accept Ts & Cs is required</span>
+         </div>
+     </div>
+
+   </div>
+   <div class="row">
+     <div class="form-group offset-11">
+       <button type="submit" class="btn btn-dark" (click)="registerNow()" [disabled]="artistForm.form.invalid">SUBMIT</button>
+     </div>
+   </div>
+  </div>

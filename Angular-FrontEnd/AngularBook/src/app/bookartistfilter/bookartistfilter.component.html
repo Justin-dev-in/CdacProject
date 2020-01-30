@@ -1,0 +1,46 @@
+<!-- user Search Filter -->
+
+<div class="container">
+    <div class="row">
+       <p class="post-head-title">FILTER</p>
+    </div>
+    <div>
+      <p class="post-head-text">Here You Can Filter Artist For Your Special Occasion
+        That Also In Your Budget, Your Event Date and Category Of Kinda Entertainer You Want. 
+      </p>
+    </div>
+    <div class="container">
+      <form>
+        <div class="col-6 offset-4 search-control">
+          <input type="text" class="form-control" [(ngModel)]="avldate.fees" name="avldate.fees" placeholder="Enter Your Event Budget*" />
+        </div>
+        <div class="col-6 offset-4 search-control">
+          <input type="text" class="form-control" [(ngModel)]="avldate.city" name="avldate.city" placeholder="City*"/>
+        </div>
+        <div class="col-6 offset-4 search-control">
+          <select class="form-control" [(ngModel)]="avldate.genre" name="avldate.genre">
+          <option selected disabled>Select Your category*</option>
+          <option>Anchor/EMCC</option>
+          <option>Singer(Solo)</option>
+          <option>Dancer(Solo)</option>
+          <option>Singer(Group)</option>
+          <option>Dancer(Group)</option>
+          <option>Instrumentalist</option>
+          <option>Live Band</option>
+          <option>Magician</option>
+          <option>Poet</option>
+          <option>Dj</option>
+          <option>Comedian</option>
+        </select>
+        </div>
+        <div class="col-6 offset-4 search-control">
+          <input type="text" class="form-control" placeholder="Event Date"  [(ngModel)]="avldate.date" name="avldate.date"onfocus="(this.type='date')"/>
+        </div> 
+        <div class="row">
+          <div class="search-control offset-7">
+            <button style="margin-left: 40px;" type="submit"  (click)="searchNow(avldate.date)"class="btn btn-dark" >Find Me An Artist</button>
+          </div>
+        </div>
+      </form>
+    </div>
+ </div>

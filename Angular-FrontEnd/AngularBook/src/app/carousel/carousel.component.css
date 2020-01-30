@@ -1,0 +1,49 @@
+/* carousel icon, image,caption*/
+
+.carousel-img::after{
+    content:"";
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    display: block;
+    position: absolute;
+    opacity: 0.5;
+    background: black;
+}
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+
+}
+.carousel-caption-subhead{
+    font-size: 18px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: lighter;
+}
+.carousel-caption-head{
+     margin-top: 20px;
+    font-size: 46px;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: lighter;
+}
+.carousel-button{
+    position: relative;
+    margin-left:auto;
+    margin-top: 15px;
+}
+.carousel-btn{
+    font-family: 'Share Tech Mono', monospace;
+    padding: 10px 30px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.carousel-btn:hover{
+    background-color: white;
+     color: black;
+     text-decoration: none;
+}

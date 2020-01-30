@@ -1,0 +1,60 @@
+
+ <div class="sideMenu">
+  <ul class="navbar-nav">
+    <li class="sideMenu-content" >
+      <a routerLink="/WelcomeArtist/My_Profile">
+        <i class="fas fa-user-circle"></i>
+        <span class="text"> Hey {{artist.artistName}}</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a href="/WelcomeArtist/MyAvlDate">
+        <i class="fas fa-highlighter"></i>
+        <span class="text" > Availability Update</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a href="/WelcomeArtist/ArtistBookings">
+        <i class="fas fa-sticky-note"></i>
+        <span class="text">My Booking</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a href="#">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="text" (click)="logoutNow()">Logout</span>
+      </a>
+    </li> 
+ </ul>
+     </div>     
+
+  <!--User Opration Menu end  -->
+ 
+ <!-- <userprofilepost></userprofilepost> -->
+ <router-outlet></router-outlet>
+ 
+<!-- <h1>Welcome {{artist.artistName}} </h1>
+    <table border="1">
+        <tr>
+    <td>Artist Email ID:{{artist.artistEmailID}}</td>
+    <td>Artist name:{{artist.artistName}}</td>
+    
+    <td>Artist name:{{artist.artistName}}</td>
+    <td>Artist name:{{artist.artistPhoneNumber}}</td>
+    <td>Artist name:{{artist.artistGenre}}</td>
+    <td>Artist name:{{artist.artistAvailDays}}</td>
+    <td>Artist name:{{artist.artistfees}}</td>
+    <td>Artist name:{{artist.artistName}}</td>
+    <td>Artist name:{{artist.artistCertification}}</td>
+    <td>Artist name:{{artist.artistExperience}}</td>
+    <td>Artist name:{{artist.artistAddress}}</td>
+    <td>Artist name:{{artist.artistPassword}}</td>
+    <td>Artist name:{{artist.artistDob}}</td>
+    <td>Artist name:{{artist.prefWorkHours}}</td>
+    <td>Artist name:{{artist.artistPicture}}</td>
+
+</tr>
+    
+
+</table>  -->
+
